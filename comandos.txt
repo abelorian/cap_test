@@ -23,3 +23,4 @@
  2075  git status
  2076  history
 
+rails g scaffold country name:string
