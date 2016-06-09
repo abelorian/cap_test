@@ -57,16 +57,8 @@
   border-color: $cap_gray;
 }
 
-.body-map { margin:0; padding:0; }
 .wrapper {
   margin-top: 50px;
-}
-
-#map { position:absolute; top:50px; bottom:0; width:60%; }
-#points {
-  position:absolute; top:50px; bottom:0; left: 60%; width:40%;
-  padding: 15px 0;
-  text-align: center;
 }
 
 .breadcum_inner {
