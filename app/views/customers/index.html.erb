@@ -7,6 +7,7 @@
     <tr>
       <th>Email</th>
       <th>Name</th>
+      <th>Rut</th>
       <th>City</th>
       <th colspan="3"></th>
     </tr>
@@ -17,6 +18,7 @@
       <tr>
         <td><%= customer.email %></td>
         <td><%= customer.name %></td>
+        <td><%= customer.rut %></td>
         <td><%= customer.city.name %></td>
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>

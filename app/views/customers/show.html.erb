@@ -11,9 +11,13 @@
 </p>
 
 <p>
-  <strong>City:</strong>
-  <%= @customer.city %>
+<strong>Rut:</strong>
+  <%= @customer.rut %>
 </p>
 
+<p>
+  <strong>City:</strong>
+  <%= @customer.city.name %>
+</p>
 <%= link_to 'Edit', edit_customer_path(@customer) %> |
 <%= link_to 'Back', customers_path %>

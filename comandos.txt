@@ -17,5 +17,6 @@ rails g scaffold city name:string country:references
 
 rails g scaffold customer email:string name:string city:references
 
+rails g migration add_rut_to_customer rut:string
 
 rake db:migrate
