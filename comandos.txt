@@ -1,26 +1,9 @@
- 2053  rails new cap_test -d postgresql
- 2054  ls
- 2055  git status
- 2056  got add .
- 2057  git status
- 2058  git add .
- 2059  git status
- 2060  nano .gitignore
- 2061  git status
- 2062  git add .
- 2063  git status
- 2064  git reset vendor/
- 2065  git status
- 2066  git add .
- 2067  git status
- 2068  git add .
- 2069  git status
- 2070  git commit -m "Add: new rails app"
- 2071  git push origin master 
- 2072  nano Gemfile
- 2073  git status
- 2074  git add .
- 2075  git status
- 2076  history
+rails new cap_test -d postgresql
+sudo su postgres
+psql
+CREATE USER cap WITH PASSWORD 'cap';
+CREATE DATABASE cap;
+GRANT ALL PRIVILEGES ON DATABASE cap to cap;
+ALTER ROLE cap CREATEROLE CREATEDB;
 
 rails g scaffold country name:string
