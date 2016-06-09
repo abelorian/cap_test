@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160609072830) do
+ActiveRecord::Schema.define(version: 20160609162006) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "cities", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "country_id"
+    t.string   "name",       null: false
+    t.integer  "country_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -26,18 +26,18 @@ ActiveRecord::Schema.define(version: 20160609072830) do
   add_index "cities", ["country_id"], name: "index_cities_on_country_id", using: :btree
 
   create_table "countries", force: :cascade do |t|
-    t.string   "name"
+    t.string   "name",       null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "customers", force: :cascade do |t|
-    t.string   "email"
-    t.string   "name"
-    t.integer  "city_id"
+    t.string   "email",      null: false
+    t.string   "name",       null: false
+    t.integer  "city_id",    null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "rut"
+    t.string   "rut",        null: false
   end
 
   add_index "customers", ["city_id"], name: "index_customers_on_city_id", using: :btree

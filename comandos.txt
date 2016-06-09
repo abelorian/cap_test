@@ -17,6 +17,20 @@ rails g scaffold city name:string country:references
 
 rails g scaffold customer email:string name:string city:references
 
-rails g migration add_rut_to_customer rut:string
+rails g migration add_rut_to_customer rut:string # Se me fue agregar el rut en cliente.
 
 rake db:migrate
+
+rails s
+
+Agregrar not null a todos los atributos
+======================================
+
+rails g migration AddNotNullToCountry
+rails g migration AddNotNullToCity
+rails g migration AddNotNullToCustomer
+
+Luego de crear las migraciones vacias, se agrega esta linea para cada atributo:
+
+change_column_null(:table, :atribute, false)
+
