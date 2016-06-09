@@ -8,7 +8,13 @@
 </head>
 <body>
 
-<%= yield %>
+  <%= render "layouts/nav" %>
+
+  <div class="wrapper">
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
+  </div>
 
 </body>
 </html>

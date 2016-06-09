@@ -1,3 +1,6 @@
+Historial de Comandos
+=====================
+
 rails new cap_test -d postgresql
 sudo su postgres
 psql
@@ -6,4 +9,13 @@ CREATE DATABASE cap;
 GRANT ALL PRIVILEGES ON DATABASE cap to cap;
 ALTER ROLE cap CREATEROLE CREATEDB;
 
+rails generate simple_form:install
+
 rails g scaffold country name:string
+
+rails g scaffold city name:string country:references
+
+rails g scaffold customer email:string name:string city:references
+
+
+rake db:migrate

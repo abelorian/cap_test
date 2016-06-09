@@ -1,0 +1,100 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ /* CUSTOM */
+
+ $cap_main: #646bbc;
+ $cap_gray: #f8f8f8;
+
+ .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+  border-color: $cap_gray;
+}
+
+.navbar-inverse {
+  background-color: $cap_gray;
+  border-color: $cap_gray;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  font-weight: bold;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+  color: $cap_main;
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus {
+  color: $cap_main;
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: $cap_main;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: $cap_gray;
+}
+
+.navbar-inverse .navbar-toggle {
+  border-color: $cap_gray;
+}
+
+.body-map { margin:0; padding:0; }
+.wrapper {
+  margin-top: 50px;
+}
+
+#map { position:absolute; top:50px; bottom:0; width:60%; }
+#points {
+  position:absolute; top:50px; bottom:0; left: 60%; width:40%;
+  padding: 15px 0;
+  text-align: center;
+}
+
+.breadcum_inner {
+  padding: 36px 60px;
+  background-color: black;
+}
+
+.breadcum_inner h3{
+  font-size: 25px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: right;
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+.home{
+  background-color: #f8f8f8;
+  min-height: 600px;
+}
+
+.header-home{
+  font-weight: 600;
+  margin-top: 80px;
+}
+
+.subheader-home{
+ font-weight: 600; 
+}
